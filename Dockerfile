@@ -24,4 +24,4 @@ USER nextjs
 EXPOSE 3000
 ENV PORT 3000
 ENV HOSTNAME "0.0.0.0"
-CMD ["node", "server.js"]
+CMD ["sh", "-c", "echo 'Starting server on port 3000' && node server.js"]
