@@ -1,6 +1,6 @@
-# AgriTech Startups App - AWS App Runner Deployment
+# AWS App Runner Demo - Deployment Guide
 
-This document contains instructions for deploying the South African AgriTech Startups web app to AWS App Runner as a containerized application.
+This document contains instructions for deploying the AWS App Runner Demo (featuring South African AgriTech Startups) to AWS App Runner.
 
 ## Prerequisites
 
@@ -17,10 +17,10 @@ This document contains instructions for deploying the South African AgriTech Sta
 
    ```bash
    # Build the Docker image
-   docker build -t agritech-app .
+   docker build -t aws-apprunner-demo .
    
    # Run locally to test
-   docker run -p 3000:3000 agritech-app
+   docker run -p 3000:3000 aws-apprunner-demo
    ```
 
    Open http://localhost:3000 in your browser to verify the app works correctly.
@@ -60,7 +60,7 @@ To avoid incurring charges for unused resources:
 aws apprunner delete-service --service-arn <your-service-arn>
 
 # Delete the ECR repository (optional)
-aws ecr delete-repository --repository-name agritech-app --force
+aws ecr delete-repository --repository-name aws-apprunner-demo --force
 ```
 
 ## Troubleshooting
